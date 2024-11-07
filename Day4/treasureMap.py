@@ -11,8 +11,8 @@ print(f"{row1}\n{row2}\n{row3}")
 question = input("Where do you want to put the Treasure ?:.....")
 answerSplit = question.split(",")
 
-rowOfTreasureIs = int(answerSplit[0])-1
-columnOfTreasureIs = int(answerSplit[1])-1
+rowOfTreasureIs = (int(answerSplit[0]))-1
+columnOfTreasureIs = (int(answerSplit[1]))-1
 
 
 rowSelected = map[rowOfTreasureIs]
