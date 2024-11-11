@@ -22,19 +22,33 @@ nr_letters = int(input("How many letters would you like in your password?\n"))
 nr_symbols = int(input(f"How many symbols would you like?\n"))
 nr_numbers = int(input(f"How many numbers would you like?\n"))
 
-pasword_list = []
+# pasword_list = []
 
-for char in range(1, nr_letters + 1):
-    pasword_list += random.choice(ascii_lowerUperCase)
+# for char in range(1, nr_letters + 1):
+#     pasword_list += random.choice(ascii_lowerUperCase)
 
-for char in range(1, nr_symbols + 1):
-    pasword_list += random.choice(punctuation)
+# for char in range(1, nr_symbols + 1):
+#     pasword_list += random.choice(punctuation)
 
-for char in range(1, nr_numbers + 1):
-    pasword_list += random.choice(digits)
+# for char in range(1, nr_numbers + 1):
+#     pasword_list += random.choice(digits)
 
-random.shuffle(pasword_list)
-for i in pasword_list:
-    password = ''.join(pasword_list)
-    # password += i or use this one
+# random.shuffle(pasword_list)
+# for i in pasword_list:
+#     password = ''.join(pasword_list)
+#     # password += i or use this one
+# print(f"Your password is: {password}")
+
+passWorlList = []
+for i in range(0, nr_letters):
+    passWorlList.append(random.choice(ascii_lowerUperCase))
+for i in range(0, nr_symbols):
+    passWorlList.append(random.choice(punctuation))
+for i in range(0, nr_numbers):
+    passWorlList.append(random.choice(digits))
+
+random.shuffle(passWorlList)
+
+for e in passWorlList:
+    password = ''.join(passWorlList)
 print(f"Your password is: {password}")
